@@ -1,0 +1,26 @@
+body {
+	background-color: lightcyan;
+}
+
+body#donation {
+	background-color: white;
+
+}
+
+body#fotos {
+	background-color: black;
+	color: white;
+}
+
+body#contact {
+	background-color: crimson;
+	color: white;
+}
+
+body#sobre_nos {
+	background-color: cornsilk;
+}
+
+.link {
+	font-weight: bold;
+}
