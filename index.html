@@ -3,68 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css" />
 	<link rel="icon" href="icon.png">
 	<title>SHARKBITE</title>
-	<style>
-        /* Styles for modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            padding: 20px;
-            background-color: #C0C0C0; /* Windows 95 gray */
-            border: 4px solid #000000; /* Windows 95 black */
-            border-radius: 10px;
-            box-shadow: 4px 4px 0px #808080; /* Windows 95 shadow */
-            font-family: "Arial", sans-serif; /* Windows 95 font */
-        }
-
-        /* Close button */
-        .close {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            color: #000000; /* Windows 95 black */
-        }
-
-        /* OK button */
-        #okButton {
-            background-color: #008080; /* Teal color */
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-            /* Windows 95 style */
-            font-family: "Arial", sans-serif;
-            border: 2px solid #000000;
-            background: #C0C0C0;
-            box-shadow: 2px 2px 0px #808080;
-        }
-
-        #okButton:hover {
-            background-color: #006666; /* Darker shade of teal */
-        }
-    </style>
 </head>
 <body id="shark">
 	<h1>SharkBite Official</h1>
 	<audio id="myAudio" controls>
   	<source src="/FREE_Tropical_Summer_x_Dancehall_type_Beat_Coast.mp3" type="audio/mpeg"></audio>
 	<!-- Modal -->
-    	<div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Get ready to rock!</p>
-            <button id="okButton">🤘</button>
+    	<div class="window" style="margin: 32px; max-width: 300px;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Get ready to rock!
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeModal()"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>🤘</p>
+            <section class="field-row" style="justify-content: flex-end;">
+                <button onclick="playAudio()" class="btn">OK</button>
+            </section>
         </div>
     	</div>
 	<header>
