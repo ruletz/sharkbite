@@ -5,55 +5,43 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="icon.png">
 	<title>SHARKBITE</title>
-	<style>
-        /* Styles for modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
+	<link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css" />
+    	<style>
+        /* Custom styles */
+        .window {
+            width: 250px;
+            margin: 32px;
         }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            text-align: center;
+        .window-body {
+            padding: 8px;
         }
 
-        /* Close button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+        .field-row {
+            justify-content: flex-end;
+            margin-top: 8px;
         }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
+    	</style>
 </head>
 <body id="shark">
 	<h1>SharkBite Official</h1>
 	<audio id="myAudio" controls>
   	<source src="/FREE_Tropical_Summer_x_Dancehall_type_Beat_Coast.mp3" type="audio/mpeg"></audio>
 	<!-- Modal -->
-    	<div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+    	<div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
             <p>Get ready to rock!</p>
-            <button id="okButton">🤘</button>
+            <section class="field-row">
+                <button id="okButton">🤘</button>
+                <button>Cancel</button>
+            </section>
         </div>
     	</div>
 	<header>
