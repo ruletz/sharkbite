@@ -49,20 +49,11 @@
 	<audio id="myAudio" controls>
   	<source src="/FREE_Tropical_Summer_x_Dancehall_type_Beat_Coast.mp3" type="audio/mpeg"></audio>
 	<!-- Modal -->
-    	<div class="window" style="margin: 32px; max-width: 300px;">
-        <div class="title-bar">
-            <div class="title-bar-text">
-                Get ready to rock!
-            </div>
-            <div class="title-bar-controls">
-                <button aria-label="Close" onclick="closeModal()"></button>
-            </div>
-        </div>
-        <div class="window-body">
-            <p>🤘</p>
-            <section class="field-row" style="justify-content: flex-end;">
-                <button onclick="playAudio()" class="btn">OK</button>
-            </section>
+    	<div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Get ready to rock!</p>
+            <button id="okButton">🤘</button>
         </div>
     	</div>
 	<header>
