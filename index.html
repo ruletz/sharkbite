@@ -1,90 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="icon.png">
 	<title>SHARKBITE</title>
-	<link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css" />
-    	<style>
-        /* Custom styles */
-        .window {
-            width: 250px;
-            margin: 32px;
+	<style>
+        /* Styles for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .window-body {
-            padding: 8px;
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
         }
 
-        .field-row {
-            justify-content: flex-end;
-            margin-top: 8px;
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
         }
-    	</style>
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body id="shark">
 	<h1>SharkBite Official</h1>
 	<audio id="myAudio" controls>
+  	<source src="/FREE_Tropical_Summer_x_Dancehall_type_Beat_Coast.mp3" type="audio/mpeg">
+  	<!-- Fallback content -->
+  	Your browser does not support the audio element.
+	</audio>
   	<source src="/FREE_Tropical_Summer_x_Dancehall_type_Beat_Coast.mp3" type="audio/mpeg"></audio>
-	<div class="window" style="margin: 32px; width: 250px">
-        <div class="title-bar">
-            <div class="title-bar-text">
-                ROCK
-            </div>
-            <div class="title-bar-controls">
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body">
+	<!-- Modal -->
+    	<div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
             <p>Get ready to rock!</p>
-            <section class="field-row" style="justify-content: flex-end">
-                <button id="okButton">🤘</button>
-            </section>
+            <button id="okButton">🤘</button>
         </div>
     	</div>
 	<header>
 		<nav>
 			<a href="index.html"><button>Albúm</button></a>
-			<a href="fotos.html"><button>Fotos</button></a>
-			<a href="sobre_nos.html"><button>Sobre Nós</button></a>
-			<a href="contact.html"><button>Contacte</button></a>
-			<a href="donation.html"><button>Donation</button></a>
-		</nav>
-	</header>
-	<h2>O teu destino!</h2>
-	<h3>As nossas mãos.</h3>
-		<!--SharkBite:-->
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/909932275&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/neddiemusic" title="Neddie" target="_blank" style="color: #cccccc; text-decoration: none;">Neddie</a> · <a href="https://soundcloud.com/neddiemusic/sharkbite-1" title="Sharkbite" target="_blank" style="color: #cccccc; text-decoration: none;">Sharkbite</a></div>
-		<!--Trappio Bros:-->
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/614167314&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/trappiobros" title="Trappio Bros." target="_blank" style="color: #cccccc; text-decoration: none;">Trappio Bros.</a> · <a href="https://soundcloud.com/trappiobros/trappio-bros-shinkansen-master-v2" title="Trappio Bros - Shinkansen" target="_blank" style="color: #cccccc; text-decoration: none;">Trappio Bros - Shinkansen</a></div>
-			<!--KSTN:-->
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/614565468&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kstn2000" title="kstn" target="_blank" style="color: #cccccc; text-decoration: none;">kstn</a> · <a href="https://soundcloud.com/kstn2000/cvr" title="caviarkstn2 prod.IBSEN" target="_blank" style="color: #cccccc; text-decoration: none;">caviarkstn2 prod.IBSEN</a></div>
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/572595738&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kstn2000" title="kstn" target="_blank" style="color: #cccccc; text-decoration: none;">kstn</a> · <a href="https://soundcloud.com/kstn2000/vermelhoemflor" title="vermelhoemflor demo" target="_blank" style="color: #cccccc; text-decoration: none;">vermelhoemflor demo</a></div>
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/572595738&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kstn2000" title="kstn" target="_blank" style="color: #cccccc; text-decoration: none;">kstn</a> · <a href="https://soundcloud.com/kstn2000/vermelhoemflor" title="vermelhoemflor demo" target="_blank" style="color: #cccccc; text-decoration: none;">vermelhoemflor demo</a></div>
-			<!--FRKLN:-->
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653500718&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/frnklnfrnkln" title="FRNKLN" target="_blank" style="color: #cccccc; text-decoration: none;">FRNKLN</a> · <a href="https://soundcloud.com/frnklnfrnkln/frnkln-lucy" title="Lucy" target="_blank" style="color: #cccccc; text-decoration: none;">Lucy</a></div>
-		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/784502572&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/frnklnfrnkln" title="FRNKLN" target="_blank" style="color: #cccccc; text-decoration: none;">FRNKLN</a> · <a href="https://soundcloud.com/frnklnfrnkln/monster" title="MONSTER" target="_blank" style="color: #cccccc; text-decoration: none;">MONSTER</a></div>
+@@ -38,12 +81,44 @@ <h3>As nossas mãos.</h3>
 		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/830779414&color=%23dc143c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lucy-val-629608937" title="Lucy Val" target="_blank" style="color: #cccccc; text-decoration: none;">Lucy Val</a> · <a href="https://soundcloud.com/lucy-val-629608937/valentino" title="Valentino" target="_blank" style="color: #cccccc; text-decoration: none;">Valentino</a></div>
 			<!--Random:-->
 		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337963485&color=%2314dcdc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ruletz" title="ruleta" target="_blank" style="color: #cccccc; text-decoration: none;">ruleta</a> · <a href="https://soundcloud.com/ruletz/vete-a-la-mierda" title="Vete a la mierda" target="_blank" style="color: #cccccc; text-decoration: none;">Vete a la mierda</a></div>
-      <script>
-        // Get the OK button
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('myAudio');
+  audio.play();
+});
+</script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
         var okButton = document.getElementById("okButton");
 
         // Get the audio element
         var audio = document.getElementById("myAudio");
 
+        // When the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show the modal
+            modal.style.display = "block";
+        });
+
         // When the user clicks the OK button
         okButton.onclick = function () {
+            // Close the modal
+            modal.style.display = "none";
+
             // Play the audio
             audio.play();
         }
 
-        // Close the window
-        document.querySelector('.title-bar-controls button').onclick = function() {
-            window.close();
-        };
+        // When the user clicks on the close button (×), close the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 <footer><center><p>All rights reserved © 1994-2021, SharkBite, Inc. and all affiliates.</p></center></footer>
