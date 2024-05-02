@@ -54,41 +54,20 @@
 			<!--Random:-->
 		<iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337963485&color=%2314dcdc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ruletz" title="ruleta" target="_blank" style="color: #cccccc; text-decoration: none;">ruleta</a> · <a href="https://soundcloud.com/ruletz/vete-a-la-mierda" title="Vete a la mierda" target="_blank" style="color: #cccccc; text-decoration: none;">Vete a la mierda</a></div>
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
+        // Get the OK button
         var okButton = document.getElementById("okButton");
 
         // Get the audio element
         var audio = document.getElementById("myAudio");
 
-        // When the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            // Show the modal
-            modal.style.display = "block";
-        });
-
         // When the user clicks the OK button
         okButton.onclick = function () {
-            // Close the modal
+            // Hide the modal
+            var modal = document.querySelector('.window');
             modal.style.display = "none";
 
             // Play the audio
             audio.play();
-        }
-
-        // When the user clicks on the close button (×), close the modal
-        var closeBtn = document.getElementsByClassName("close")[0];
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
         }
     </script>
 </body>
